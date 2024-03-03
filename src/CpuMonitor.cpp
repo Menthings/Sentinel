@@ -28,7 +28,7 @@ double CpuMonitor::getCPULoad() {
     #elif __APPLE__
     return getCPULoadMac();
     #else
-    std::cerr << "Système non pris en charge." << std::endl;
+    std::cerr << "System not supported" << std::endl;
     return -1.0;
     #endif
 }
@@ -36,9 +36,9 @@ double CpuMonitor::getCPULoad() {
 void CpuMonitor::printLoad() {
     double load = getCPULoad();
     if (load >= 0) {
-        std::cout << "Charge CPU actuelle : " << std::fixed << std::setprecision(2) << load << "%" << std::endl;
+        std::cout << "Current CPU load : " << std::fixed << std::setprecision(2) << load << "%" << std::endl;
     } else {
-        std::cout << "Impossible de récupérer la charge CPU." << std::endl;
+        std::cout << "Unable to recover CPU load" << std::endl;
     }
 }
 
