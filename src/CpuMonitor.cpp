@@ -1,7 +1,6 @@
 #include "CpuMonitor.h"
 #include <iostream>
 #include <iomanip>
-
 #ifdef __linux__
 #include <fstream>
 #include <sstream>
@@ -48,20 +47,16 @@ double CpuMonitor::getCPULoadLinux() {
     std::string line;
     std::getline(file, line);
     file.close();
-
     std::istringstream iss(line);
     std::string cpu;
     long long user, nice, system, idle;
     iss >> cpu >> user >> nice >> system >> idle;
-
     static long long prevIdle = idle, prevTotal = user + nice + system + idle;
     long long total = user + nice + system + idle;
     long long totalDiff = total - prevTotal;
     long long idleDiff = idle - prevIdle;
-
     prevTotal = total;
     prevIdle = idle;
-
     return totalDiff == 0 ? 0.0 : 100.0 * (totalDiff - idleDiff) / totalDiff;
 }
 #endif
@@ -74,27 +69,21 @@ double CpuMonitor::getCPULoadWindows() {
     if (!init) {
         SYSTEM_INFO sysInfo;
         FILETIME ftime, fsys, fuser;
-
         GetSystemInfo(&sysInfo);
         numProcessors = sysInfo.dwNumberOfProcessors;
-
         GetSystemTimeAsFileTime(&ftime);
         memcpy(&lastCPU, &ftime, sizeof(FILETIME));
-
         HANDLE hProcess = GetCurrentProcess();
         GetProcessTimes(hProcess, &ftime, &ftime, &fsys, &fuser);
         memcpy(&lastSysCPU, &fsys, sizeof(FILETIME));
         memcpy(&lastUserCPU, &fuser, sizeof(FILETIME));
         init = true;
     }
-
     FILETIME ftime, fsys, fuser;
     ULARGE_INTEGER now, sys, user;
     double percent;
-
     GetSystemTimeAsFileTime(&ftime);
     memcpy(&now, &ftime, sizeof(FILETIME));
-
     HANDLE hProcess = GetCurrentProcess();
     GetProcessTimes(hProcess, &ftime, &ftime, &fsys, &fuser);
     memcpy(&sys, &fsys, sizeof(FILETIME));
@@ -105,7 +94,6 @@ double CpuMonitor::getCPULoadWindows() {
     lastCPU = now;
     lastUserCPU = user;
     lastSysCPU = sys;
-
     return percent * 100;
 }
 #endif
@@ -118,9 +106,7 @@ double CpuMonitor::getCPULoadMac() {
     unsigned int numCPUsU = 0;
     processor_cpu_load_info_t cpuLoad;
     mach_msg_type_number_t numCpuLoad;
-
     host_processor_info(mach_host_self(), PROCESSOR_CPU_LOAD_INFO, &numCPUs, reinterpret_cast<processor_info_array_t*>(&cpuLoad), &numCpuLoad);
-
     double totalLoad = 0.0;
     for (unsigned int i = 0; i < numCPUs; ++i) {
         float inUse, total;
@@ -128,9 +114,7 @@ double CpuMonitor::getCPULoadMac() {
         total = inUse + cpuLoad[i].cpu_ticks[CPU_STATE_IDLE];
         totalLoad += inUse / total;
     }
-
     vm_deallocate(mach_task_self(), reinterpret_cast<vm_address_t>(cpuLoad), sizeof(cpu_load_info_data_t) * numCPUs);
-
     return totalLoad / numCPUs * 100;
 }
 #endif

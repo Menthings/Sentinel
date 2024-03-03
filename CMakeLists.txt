@@ -13,10 +13,9 @@ set(SOURCES
     src/NetworkMonitor.cpp
     src/RamMonitor.cpp
     src/SystemMonitor.cpp
-    src/main.cpp
 )
 
-add_executable(${PROJECT_NAME} ${SOURCES})
+add_executable(${PROJECT_NAME} ${SOURCES} main.cpp)
 
 install(TARGETS ${PROJECT_NAME} DESTINATION /usr/local/bin)
 
