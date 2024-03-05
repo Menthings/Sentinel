@@ -21,7 +21,12 @@ CpuMonitor::~CpuMonitor() {
     std::cout << "CpuMonitor destroyed." << std::endl;
 }
 
-double CpuMonitor::getCPULoad() {
+void CpuMonitor::printLoad() const {
+    double load = getCPULoad();
+    std::cout << "Current CPU load: " << std::fixed << std::setprecision(2) << load << "%" << std::endl;
+}
+
+double CpuMonitor::getCPULoad() const {
     #ifdef __linux__
     return getCPULoadLinux();
     #elif _WIN32
@@ -34,17 +39,8 @@ double CpuMonitor::getCPULoad() {
     #endif
 }
 
-void CpuMonitor::printLoad() {
-    double load = getCPULoad();
-    if (load >= 0) {
-        std::cout << "Current CPU load: " << std::fixed << std::setprecision(2) << load << "%" << std::endl;
-    } else {
-        std::cout << "Unable to recover CPU load" << std::endl;
-    }
-}
-
 #ifdef __linux__
-double CpuMonitor::getCPULoadLinux() {
+double CpuMonitor::getCPULoadLinux() const {
     std::ifstream fileStart("/proc/stat");
     std::string lineStart;
     std::getline(fileStart, lineStart);
@@ -75,7 +71,7 @@ double CpuMonitor::getCPULoadLinux() {
 #endif
 
 #ifdef _WIN32
-double CpuMonitor::getCPULoadWindows() {
+double CpuMonitor::getCPULoadWindows() const {
     static ULARGE_INTEGER lastCPU, lastSysCPU, lastUserCPU;
     static int numProcessors;
     static bool init = false;
@@ -120,7 +116,7 @@ double CpuMonitor::getCPULoadWindows() {
 #endif
 
 #ifdef __APPLE__
-double CpuMonitor::getCPULoadMac() {
+double CpuMonitor::getCPULoadMac() const {
     processor_info_array_t cpuInfo;
     mach_msg_type_number_t numCpuInfo;
     natural_t numCPUs;
