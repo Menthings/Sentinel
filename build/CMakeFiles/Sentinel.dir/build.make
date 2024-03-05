@@ -97,10 +97,24 @@ CMakeFiles/Sentinel.dir/src/DiskMonitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sentinel.dir/src/DiskMonitor.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/menthings/Projets/Sentinel/src/DiskMonitor.cpp -o CMakeFiles/Sentinel.dir/src/DiskMonitor.cpp.s
 
+CMakeFiles/Sentinel.dir/src/Factory.cpp.o: CMakeFiles/Sentinel.dir/flags.make
+CMakeFiles/Sentinel.dir/src/Factory.cpp.o: ../src/Factory.cpp
+CMakeFiles/Sentinel.dir/src/Factory.cpp.o: CMakeFiles/Sentinel.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/menthings/Projets/Sentinel/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Sentinel.dir/src/Factory.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sentinel.dir/src/Factory.cpp.o -MF CMakeFiles/Sentinel.dir/src/Factory.cpp.o.d -o CMakeFiles/Sentinel.dir/src/Factory.cpp.o -c /home/menthings/Projets/Sentinel/src/Factory.cpp
+
+CMakeFiles/Sentinel.dir/src/Factory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Sentinel.dir/src/Factory.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/menthings/Projets/Sentinel/src/Factory.cpp > CMakeFiles/Sentinel.dir/src/Factory.cpp.i
+
+CMakeFiles/Sentinel.dir/src/Factory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sentinel.dir/src/Factory.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/menthings/Projets/Sentinel/src/Factory.cpp -o CMakeFiles/Sentinel.dir/src/Factory.cpp.s
+
 CMakeFiles/Sentinel.dir/src/NetworkMonitor.cpp.o: CMakeFiles/Sentinel.dir/flags.make
 CMakeFiles/Sentinel.dir/src/NetworkMonitor.cpp.o: ../src/NetworkMonitor.cpp
 CMakeFiles/Sentinel.dir/src/NetworkMonitor.cpp.o: CMakeFiles/Sentinel.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/menthings/Projets/Sentinel/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Sentinel.dir/src/NetworkMonitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/menthings/Projets/Sentinel/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Sentinel.dir/src/NetworkMonitor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sentinel.dir/src/NetworkMonitor.cpp.o -MF CMakeFiles/Sentinel.dir/src/NetworkMonitor.cpp.o.d -o CMakeFiles/Sentinel.dir/src/NetworkMonitor.cpp.o -c /home/menthings/Projets/Sentinel/src/NetworkMonitor.cpp
 
 CMakeFiles/Sentinel.dir/src/NetworkMonitor.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/Sentinel.dir/src/NetworkMonitor.cpp.s: cmake_force
 CMakeFiles/Sentinel.dir/src/RamMonitor.cpp.o: CMakeFiles/Sentinel.dir/flags.make
 CMakeFiles/Sentinel.dir/src/RamMonitor.cpp.o: ../src/RamMonitor.cpp
 CMakeFiles/Sentinel.dir/src/RamMonitor.cpp.o: CMakeFiles/Sentinel.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/menthings/Projets/Sentinel/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Sentinel.dir/src/RamMonitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/menthings/Projets/Sentinel/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Sentinel.dir/src/RamMonitor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sentinel.dir/src/RamMonitor.cpp.o -MF CMakeFiles/Sentinel.dir/src/RamMonitor.cpp.o.d -o CMakeFiles/Sentinel.dir/src/RamMonitor.cpp.o -c /home/menthings/Projets/Sentinel/src/RamMonitor.cpp
 
 CMakeFiles/Sentinel.dir/src/RamMonitor.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/Sentinel.dir/src/RamMonitor.cpp.s: cmake_force
 CMakeFiles/Sentinel.dir/src/SystemMonitor.cpp.o: CMakeFiles/Sentinel.dir/flags.make
 CMakeFiles/Sentinel.dir/src/SystemMonitor.cpp.o: ../src/SystemMonitor.cpp
 CMakeFiles/Sentinel.dir/src/SystemMonitor.cpp.o: CMakeFiles/Sentinel.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/menthings/Projets/Sentinel/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Sentinel.dir/src/SystemMonitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/menthings/Projets/Sentinel/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Sentinel.dir/src/SystemMonitor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sentinel.dir/src/SystemMonitor.cpp.o -MF CMakeFiles/Sentinel.dir/src/SystemMonitor.cpp.o.d -o CMakeFiles/Sentinel.dir/src/SystemMonitor.cpp.o -c /home/menthings/Projets/Sentinel/src/SystemMonitor.cpp
 
 CMakeFiles/Sentinel.dir/src/SystemMonitor.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/Sentinel.dir/src/SystemMonitor.cpp.s: cmake_force
 CMakeFiles/Sentinel.dir/main.cpp.o: CMakeFiles/Sentinel.dir/flags.make
 CMakeFiles/Sentinel.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Sentinel.dir/main.cpp.o: CMakeFiles/Sentinel.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/menthings/Projets/Sentinel/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Sentinel.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/menthings/Projets/Sentinel/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Sentinel.dir/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sentinel.dir/main.cpp.o -MF CMakeFiles/Sentinel.dir/main.cpp.o.d -o CMakeFiles/Sentinel.dir/main.cpp.o -c /home/menthings/Projets/Sentinel/main.cpp
 
 CMakeFiles/Sentinel.dir/main.cpp.i: cmake_force
@@ -157,6 +171,7 @@ CMakeFiles/Sentinel.dir/main.cpp.s: cmake_force
 Sentinel_OBJECTS = \
 "CMakeFiles/Sentinel.dir/src/CpuMonitor.cpp.o" \
 "CMakeFiles/Sentinel.dir/src/DiskMonitor.cpp.o" \
+"CMakeFiles/Sentinel.dir/src/Factory.cpp.o" \
 "CMakeFiles/Sentinel.dir/src/NetworkMonitor.cpp.o" \
 "CMakeFiles/Sentinel.dir/src/RamMonitor.cpp.o" \
 "CMakeFiles/Sentinel.dir/src/SystemMonitor.cpp.o" \
@@ -167,13 +182,14 @@ Sentinel_EXTERNAL_OBJECTS =
 
 bin/Sentinel: CMakeFiles/Sentinel.dir/src/CpuMonitor.cpp.o
 bin/Sentinel: CMakeFiles/Sentinel.dir/src/DiskMonitor.cpp.o
+bin/Sentinel: CMakeFiles/Sentinel.dir/src/Factory.cpp.o
 bin/Sentinel: CMakeFiles/Sentinel.dir/src/NetworkMonitor.cpp.o
 bin/Sentinel: CMakeFiles/Sentinel.dir/src/RamMonitor.cpp.o
 bin/Sentinel: CMakeFiles/Sentinel.dir/src/SystemMonitor.cpp.o
 bin/Sentinel: CMakeFiles/Sentinel.dir/main.cpp.o
 bin/Sentinel: CMakeFiles/Sentinel.dir/build.make
 bin/Sentinel: CMakeFiles/Sentinel.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/menthings/Projets/Sentinel/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable bin/Sentinel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/menthings/Projets/Sentinel/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable bin/Sentinel"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Sentinel.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

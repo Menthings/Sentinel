@@ -246,6 +246,30 @@ src/DiskMonitor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sentinel.dir/build.make CMakeFiles/Sentinel.dir/src/DiskMonitor.cpp.s
 .PHONY : src/DiskMonitor.cpp.s
 
+src/Factory.o: src/Factory.cpp.o
+.PHONY : src/Factory.o
+
+# target to build an object file
+src/Factory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sentinel.dir/build.make CMakeFiles/Sentinel.dir/src/Factory.cpp.o
+.PHONY : src/Factory.cpp.o
+
+src/Factory.i: src/Factory.cpp.i
+.PHONY : src/Factory.i
+
+# target to preprocess a source file
+src/Factory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sentinel.dir/build.make CMakeFiles/Sentinel.dir/src/Factory.cpp.i
+.PHONY : src/Factory.cpp.i
+
+src/Factory.s: src/Factory.cpp.s
+.PHONY : src/Factory.s
+
+# target to generate assembly for a file
+src/Factory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sentinel.dir/build.make CMakeFiles/Sentinel.dir/src/Factory.cpp.s
+.PHONY : src/Factory.cpp.s
+
 src/NetworkMonitor.o: src/NetworkMonitor.cpp.o
 .PHONY : src/NetworkMonitor.o
 
@@ -340,6 +364,9 @@ help:
 	@echo "... src/DiskMonitor.o"
 	@echo "... src/DiskMonitor.i"
 	@echo "... src/DiskMonitor.s"
+	@echo "... src/Factory.o"
+	@echo "... src/Factory.i"
+	@echo "... src/Factory.s"
 	@echo "... src/NetworkMonitor.o"
 	@echo "... src/NetworkMonitor.i"
 	@echo "... src/NetworkMonitor.s"
