@@ -15,7 +15,7 @@ set(SOURCES
     src/SystemMonitor.cpp
 )
 
-add_executable(${PROJECT_NAME} ${SOURCES} main.cpp)
+add_executable(${PROJECT_NAME} ${SOURCES} src/main.cpp)
 
 install(TARGETS ${PROJECT_NAME} DESTINATION /usr/local/bin)
 
@@ -27,7 +27,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 )
 
 if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE Release)
+    set(CMAKE_BUILD_TYPE Release)
 endif()
 
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
