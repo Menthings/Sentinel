@@ -11,7 +11,6 @@ file(GLOB_RECURSE SOURCES "src/*.cpp")
 
 list(APPEND SOURCES "main.cpp")
 
-# Déclaration de l'exécutable
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 install(TARGETS ${PROJECT_NAME} DESTINATION /usr/local/bin)
