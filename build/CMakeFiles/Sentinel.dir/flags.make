@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/menthings/Projets/Sentinel/include
 
-CXX_FLAGS = -O3 -std=c++17
+CXX_FLAGS = -O3 -std=gnu++17
 

@@ -1,15 +1,16 @@
 #pragma once
+#include "Monitor.h"
 
-class CpuMonitor {
+class CpuMonitor : public Monitor {
 public:
     CpuMonitor();
-    ~CpuMonitor();
+    ~CpuMonitor() override;
 
-    double getCPULoad();
-    void printLoad();
+    void printLoad() const override;
 
 private:
-    double getCPULoadLinux();
-    double getCPULoadWindows();
-    double getCPULoadMac();
+    double getCPULoad() const;
+    double getCPULoadLinux() const;
+    double getCPULoadWindows() const;
+    double getCPULoadMac() const;
 };

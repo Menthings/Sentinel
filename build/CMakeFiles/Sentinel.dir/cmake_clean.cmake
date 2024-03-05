@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Sentinel.dir/src/CpuMonitor.cpp.o.d"
   "CMakeFiles/Sentinel.dir/src/DiskMonitor.cpp.o"
   "CMakeFiles/Sentinel.dir/src/DiskMonitor.cpp.o.d"
+  "CMakeFiles/Sentinel.dir/src/Factory.cpp.o"
+  "CMakeFiles/Sentinel.dir/src/Factory.cpp.o.d"
   "CMakeFiles/Sentinel.dir/src/NetworkMonitor.cpp.o"
   "CMakeFiles/Sentinel.dir/src/NetworkMonitor.cpp.o.d"
   "CMakeFiles/Sentinel.dir/src/RamMonitor.cpp.o"
